@@ -1,0 +1,14 @@
+<form action="/userstatus/index/save" method="POST" id="userstatus">
+    <p>
+    <ul>
+        <li>
+            <input type="checkbox" id="userstatus_value" name="userstatus_value" value="1"
+                   checked="<?= ($this->getUserStatusAttributeValue() == true) ? 'checked' : ''; ?>">
+            <label for="pharmacy_name"><?php echo $this->escapeHtml(__('User Status')); ?></label>
+        </li>
+    </ul>
+    </p>
+    <button type="submit" title="<?php echo $this->escapeHtml(__('Save')); ?>" class="button">
+        <span><span><?php echo $this->escapeHtml(__('Save')); ?></span></span>
+    </button>
+</form>

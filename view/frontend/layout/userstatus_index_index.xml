@@ -1,0 +1,9 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <update handle="customer_account"/>
+    <body>
+        <referenceBlock name="content">
+            <block class="EvDev\UserStatus\Block\Index" name="userstatus.index.index" template="EvDev_UserStatus::index.phtml" cacheable="false" />
+        </referenceBlock>
+    </body>
+</page>

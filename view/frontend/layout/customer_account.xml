@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="//www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="customer_account_navigation">
+            <block class="Magento\Framework\View\Element\Html\Link\Current"
+                   name="customer-account-navigation-custom-link" after="-">
+                <arguments>
+                    <argument name="label" xsi:type="string">My Status</argument>
+                    <argument name="path" xsi:type="string">userstatus</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="header.container">
+            <block class="Magento\Framework\View\Element\Template" name="status" after="-" template="EvDev_UserStatus::status.phtml"/>
+        </referenceBlock>
+    </body>
+</page>
