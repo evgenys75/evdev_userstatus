@@ -2,9 +2,11 @@
     <p>
     <ul>
         <li>
-            <input type="checkbox" id="userstatus_value" name="userstatus_value" value="1"
-                   checked="<?= ($this->getUserStatusAttributeValue() == true) ? 'checked' : ''; ?>">
-            <label for="pharmacy_name"><?php echo $this->escapeHtml(__('User Status')); ?></label>
+            <select id="customer_status" name="customer_status">
+                <option value="1" <?= ($this->getUserStatusAttributeValue() == 1) ? 'selected' : ''; ?>>Active</option>
+                <option value="0" <?= ($this->getUserStatusAttributeValue() == 0) ? 'selected' : ''; ?>>InActive
+                </option>
+            </select>
         </li>
     </ul>
     </p>

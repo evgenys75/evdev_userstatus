@@ -1,7 +1,5 @@
 <?php
-
 namespace EvDev\UserStatus\Controller\Index;
-
 
 use Magento\Customer\Api\CustomerRepositoryInterface;
 use Magento\Customer\Api\Data\CustomerInterface;
@@ -32,12 +30,14 @@ class Save extends Index implements HttpPostActionInterface
     public $customerSession;
     protected $customerRepositoryInterface;
     protected $request;
+
     /**
      * Save constructor.
      * @param PageFactory $resultPageFactory
      * @param CustomerInterface $customerInterface
      * @param Session $customerSession
      * @param CustomerRepositoryInterface $customerRepositoryInterface
+     * @param Request $request
      * @param RedirectFactory $resultRedirect
      */
     public function __construct(
@@ -82,6 +82,7 @@ class Save extends Index implements HttpPostActionInterface
     protected function saveAttribute($data)
     {
         if (is_array($data) && !empty($data)) {
+
             foreach ($data as $key => $val) {
                 $this->customer->setCustomAttribute($key, $val);
             }
